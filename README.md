@@ -29,6 +29,7 @@ The app allows users to browse a list of Marvel characters fetched from the Marv
 - Create an account on the Marvel Developer Portal to obtain your API keys.
 - Add your public and private keys to the local.properties file using the Secrets Gradle Plugin:
 > MARVEL_PUBLIC_KEY=your_public_key
+
 > MARVEL_PRIVATE_KEY=your_private_key
 - Build and run the project in Android Studio.
 
@@ -45,3 +46,5 @@ KtLint is used to enforce coding standards. Run the lint check with:
 > ./gradlew ktlintCheck
 
 # App Recording
+> https://github.com/user-attachments/assets/3b5c988d-633a-4671-b418-92711dcb32dc
+
