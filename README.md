@@ -1,5 +1,5 @@
-# Marvel Character Guide
-This project provides a solution to the Marvel Character Guide coding test. The app allows users to browse a list of Marvel characters fetched from the Marvel API and view detailed information about selected characters. Additional features like search functionality and data caching are implemented to enhance user experience. The project showcases best practices in Android development with an emphasis on clean, maintainable, and testable code.
+# Marvel App
+The app allows users to browse a list of Marvel characters fetched from the Marvel API and view detailed information about selected characters. Additional features like search functionality and data caching are implemented to enhance user experience. The project showcases best practices in Android development with an emphasis on clean, maintainable, and testable code.
 
 # Tools & Technologies Used
 - **Clean Architecture**: The project follows a layered architecture with Data, Domain, and Presentation layers to ensure separation of concerns and scalability.
