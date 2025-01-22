@@ -1,27 +1,49 @@
-# Fueled Coding Test
-Oh no! One of Dr. Doom's nefarious hackers got into the codebase for our favorite Marvel character guide app! It seems they've made a mess of things. They removed the details screen, damaged some of the UI, and some other things. Perhaps you can help out and make it right!
+# Marvel Character Guide
+This project provides a solution to the Marvel Character Guide coding test. The app allows users to browse a list of Marvel characters fetched from the Marvel API and view detailed information about selected characters. Additional features like search functionality and data caching are implemented to enhance user experience. The project showcases best practices in Android development with an emphasis on clean, maintainable, and testable code.
 
-## Assessment
-Show us what you'd like to do to make the codebase functional and efficient again. There isn't necessarily an overarching right or wrong way to do things, we're mostly just interested to see what decisions you make along the way!
+# Tools & Technologies Used
+**Clean Architecture**: The project follows a layered architecture with Data, Domain, and Presentation layers to ensure separation of concerns and scalability.
+**Koin**: Used for dependency injection to manage class dependencies efficiently.
+**Kotlin Serialization Converter**: Integrated for seamless JSON parsing and serialization when communicating with the Marvel API.
+**Room DB**: Provides caching for the list of characters, enabling offline access and reducing network usage.
+**List-Detail Layout**: Implements an intuitive interface for listing characters and navigating to detailed character views.
+**Unit, Mockk, & Turbine**: Employed for unit and flow testing to ensure reliable business logic.
+**Secrets Gradle Plugin**: Used for securely handling sensitive API keys.
+**CI/CD Pipeline**: Configured with GitHub Actions to automate build, test, and lint checks.
+**KtLint**: Enforces Kotlin coding standards to maintain code quality.
+**Jetpack Compose**: Utilized for building modern, declarative UI components.
 
-## Requirements
-- You will need to connect to the live Marvel API to fetch data. You'll need credentials to be able to access the API, so you need to create a (free) account on the [Marvel Developer Portal](https://developer.marvel.com/) to get them. Once you get your public and private keys, update the constants in `ApiConstants.kt` with your keys and you should be good to go!
-- If you use some AI help along the way, you must cite your query and leave a comment along with the solution code you used.
-- Spend no more than 4-6 hours on this exercise. It's more about the quality of your work than the quantity!
-- Add a detail screen to display details of a selected character
-- Bonus points for adding tests for the business logic
+# Features
+**Character List Screen**: Displays a list of Marvel characters fetched from the Marvel API.
+**Character Detail Screen**: Shows detailed information about a selected character, including their description and available comics.
+**Search Functionality**: Enables users to search for characters by name.
+**Data Caching**: Implements caching using Room DB to persist character data for offline access.
 
-## Completion
-When you've finished, please include a short note with your response, explaining:
-- What were your priorities, and why?
-- If you had another two days, what would you have tackled next?
-- What would you change about the structure of the code?
-- What bugs did you find but not fix?
-- What would you change about the visual design of the app?
-- How long did you spend on this project(approximately)?
+# Key Design Choices
+**Clean Architecture**: Separation into Data, Domain, and Presentation layers ensures a modular, maintainable, and scalable codebase.
+**Dependency Injection with Koin**: Simplifies dependency creation and injection across layers, promoting flexibility and testability.
+**CI/CD Integration**: A GitHub Actions workflow automates linting, testing, and building, ensuring continuous integration and code quality.
 
-## Instructions
-1. Clone this repo to a repo on your own Github account and **make it private**
-2. Invite user `intakebot` to collaborate on that repo
-3. Address each step of the problem above and commit as necessary
-4. Once you are finished, open a PR on your work (in your own repository) and assign `intakebot` as the reviewer and notify your Fueled contact via email.
+# Setup Instructions
+- Clone this repository.
+- Create an account on the Marvel Developer Portal to obtain your API keys.
+- Add your public and private keys to the local.properties file using the Secrets Gradle Plugin:
+``
+MARVEL_PUBLIC_KEY=your_public_key
+MARVEL_PRIVATE_KEY=your_private_key
+``
+- Build and run the project in Android Studio.
+
+# Testing
+Unit and flow tests are implemented using JUnit, Mockk, and Turbine.
+Run tests with:
+> ./gradlew test
+
+# Continuous Integration
+The CI/CD pipeline uses GitHub Actions to automate linting, testing, and building. This ensures code quality and reliability before changes are merged.
+
+# Linting
+KtLint is used to enforce coding standards. Run the lint check with:
+> ./gradlew ktlintCheck
+
+# App Recording
